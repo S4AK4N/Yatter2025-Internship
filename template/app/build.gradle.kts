@@ -74,9 +74,8 @@ dependencies {
   implementation(libs.koin.androidx.compose)
   implementation(libs.coil.compose)
   implementation(libs.androidx.core.splashscreen)
-    implementation(libs.androidx.material3.android)
 
-    testImplementation(libs.junit)
+  testImplementation(libs.junit)
   testImplementation(libs.mockk)
   testImplementation(libs.truth)
   testImplementation(libs.kotlin.test)
