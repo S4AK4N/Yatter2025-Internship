@@ -5,14 +5,14 @@ import com.dmm.bootcamp.yatter2025.ui.timeline.bindingmodel.YweetBindingModel
 data class PublicTimelineUiState(
     val yweetList: List<YweetBindingModel>,
     val isLoading: Boolean,
-    val isRefrashing: Boolean
+    val isRefreshing: Boolean
 ){
     // インスタンス化せずに初期化
     companion object{
         fun empty(): PublicTimelineUiState = PublicTimelineUiState(
             yweetList = emptyList(),
             isLoading = false,
-            isRefrashing = false
+            isRefreshing = false
         )
     }
 }

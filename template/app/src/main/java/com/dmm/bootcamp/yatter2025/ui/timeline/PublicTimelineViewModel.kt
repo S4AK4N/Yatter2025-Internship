@@ -38,9 +38,9 @@ class PublicTimelineViewModel(private val yweetRepository: YweetRepository,): Vi
 
     fun onRefresh(){
         viewModelScope.launch{
-            _uiState.update{it.copy(isRefrashing = true)} // リフレッシュ開始
+            _uiState.update{it.copy(isRefreshing = true)} // リフレッシュ開始
             fetchPublicTimeline()   // データフェッチ
-            _uiState.update{it.copy(isRefrashing = false)} // リフレッシュ終了
+            _uiState.update{it.copy(isRefreshing = false)} // リフレッシュ終了
         }
     }
 }
