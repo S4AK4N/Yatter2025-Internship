@@ -7,7 +7,7 @@ import com.dmm.bootcamp.yatter2025.common.navigation.Destination
 
 class LoginDestination(
     builder: (NavOptionsBuilder.() -> Unit)? = null
-) : Destination(ROUTE) {
+) : Destination(ROUTE, builder) {
     companion object {
         private const val ROUTE = "login"
 

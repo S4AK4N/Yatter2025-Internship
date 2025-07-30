@@ -5,6 +5,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.navigation.Navigation.findNavController
+import com.dmm.bootcamp.yatter2025.ui.LocalNavController
 import org.koin.androidx.compose.getViewModel
 
 @Composable

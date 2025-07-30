@@ -48,6 +48,8 @@ class LoginViewModel(
     }
 
     fun onClickLogin() {
+        println("onClickLogin called") // ← ★ ここに仕込む！
+
         viewModelScope.launch {
         _uiState.update { it.copy(isLoading = true) } // 1
 

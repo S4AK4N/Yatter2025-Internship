@@ -1,7 +1,9 @@
 package com.dmm.bootcamp.yatter2025.ui
 
+import androidx.compose.runtime.compositionLocalOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.navigation.NavController
 import com.dmm.bootcamp.yatter2025.common.navigation.Destination
 import com.dmm.bootcamp.yatter2025.domain.service.CheckLoginService
 import com.dmm.bootcamp.yatter2025.domain.service.LoginService
@@ -29,4 +31,5 @@ class MainViewModel(
             }
         }
     }
+
 }
