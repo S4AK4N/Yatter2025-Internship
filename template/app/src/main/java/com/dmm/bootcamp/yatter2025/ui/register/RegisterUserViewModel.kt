@@ -13,11 +13,11 @@ import com.dmm.bootcamp.yatter2025.domain.model.Username
 import com.dmm.bootcamp.yatter2025.usecase.register.RegisterUserUseCaseResult
 import kotlinx.coroutines.launch
 
-class RegisterViewModel(
+class RegisterUserViewModel(
     private val registerUserUseCase: RegisterUserUseCase
 ) :ViewModel(){
-    private val _uiState: MutableStateFlow<RegisterUiState> = MutableStateFlow(RegisterUiState.empty())
-    val uiState: StateFlow<RegisterUiState> = _uiState.asStateFlow()
+    private val _uiState: MutableStateFlow<RegisterUserUiState> = MutableStateFlow(RegisterUserUiState.empty())
+    val uiState: StateFlow<RegisterUserUiState> = _uiState.asStateFlow()
 
 
     // 導線時に使用

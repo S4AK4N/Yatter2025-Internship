@@ -1,18 +1,19 @@
 package com.dmm.bootcamp.yatter2025.ui.register
 
-import com.dmm.bootcamp.yatter2025.ui.register.bindingmodel.RegisterBindingModel
+import com.dmm.bootcamp.yatter2025.ui.register.bindingmodel.RegisterUserBindingModel
 
-data class RegisterUiState(
-    val registerBindingModel: RegisterBindingModel,
+data class RegisterUserUiState(
+    val registerBindingModel: RegisterUserBindingModel,
     val isLoading: Boolean,
     val validUsername: Boolean,
     val validPassword: Boolean,
-) {
+
+    ) {
     val isEnableRegister: Boolean = validUsername && validPassword
 
     companion object{
-        fun empty(): RegisterUiState = RegisterUiState(
-            registerBindingModel = RegisterBindingModel(
+        fun empty(): RegisterUserUiState = RegisterUserUiState(
+            registerBindingModel = RegisterUserBindingModel(
                 username = "",
                 password = ""
             ),
