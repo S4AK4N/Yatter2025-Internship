@@ -10,7 +10,7 @@ data class PostUiState(
         fun empty(): PostUiState = PostUiState(
             bindingModel = PostBindingModel(
                 avaterUrl = null,
-                yweet = "",
+                yweetText = "",
             ),
             isLoading = false,
         )
