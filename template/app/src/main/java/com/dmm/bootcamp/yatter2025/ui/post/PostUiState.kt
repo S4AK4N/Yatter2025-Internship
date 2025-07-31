@@ -6,6 +6,7 @@ data class PostUiState(
     val bindingModel: PostBindingModel,
     val isLoading: Boolean,
 ){
+
     companion object {
         fun empty(): PostUiState = PostUiState(
             bindingModel = PostBindingModel(
@@ -15,4 +16,6 @@ data class PostUiState(
             isLoading = false,
         )
     }
+    val canPost: Boolean
+        get() = bindingModel.yweetText.isNotEmpty()
 }

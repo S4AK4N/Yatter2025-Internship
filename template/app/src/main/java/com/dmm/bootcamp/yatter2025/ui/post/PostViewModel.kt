@@ -43,7 +43,7 @@ class PostViewModel(
     }
 
     //  Yweet内容書き換え時に呼び出されるメソッド
-    fun onChangedYweet(yweetText: String) {
+    fun onChangedYweetText(yweetText: String) {
 
         // 入力された文字列にUiStateを更新
         _uiState.update { it.copy(bindingModel = uiState.value.bindingModel.copy(yweetText = yweetText)) }

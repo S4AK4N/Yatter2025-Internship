@@ -17,6 +17,7 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.material.TextField
 import androidx.compose.material.TextFieldDefaults
+import androidx.compose.material.Button
 import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -88,7 +89,17 @@ fun PostTemplate(
                             unfocusedIndicatorColor = Color.Transparent,
                             disabledIndicatorColor = Color.Transparent,
                         ),
+                        placeholder = {
+                            Text(text = "今何してる？")
+                        },
                     )
+                    Button(
+                        onClick = onClickPost,
+                        modifier = Modifier.padding(top = 16.dp),
+                        enabled = canPost,
+                    ){
+                        Text(text = "ツイート")
+                    }
                 }
             }
             if (isLoading) {
