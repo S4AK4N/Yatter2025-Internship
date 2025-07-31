@@ -10,6 +10,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import com.dmm.bootcamp.yatter2025.domain.model.Username
+import com.dmm.bootcamp.yatter2025.ui.timeline.PublicTimelineDestination
 import com.dmm.bootcamp.yatter2025.usecase.register.RegisterUserUseCaseResult
 import kotlinx.coroutines.launch
 
@@ -64,6 +65,7 @@ class RegisterUserViewModel(
                 is RegisterUserUseCaseResult.Success -> {
                     // 3
                     // パブリックタイムライン画面に遷移する処理の追加
+                    _destination.value = PublicTimelineDestination()
                 }
 
                 is RegisterUserUseCaseResult.Failure -> {
